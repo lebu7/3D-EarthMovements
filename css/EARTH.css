@@ -1,0 +1,41 @@
+p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(18, 81, 139);
+    letter-spacing: 3px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.center{
+    position: absolute;
+    top: 150px;
+    left: 500px;
+}
+#earth{
+    background: url(https://images4.alphacoders.com/665/thumb-1920-665825.jpg);
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    box-shadow: -20px -20px 20px rgba(0, 0, 0, 0.87) inset,0 0 13px black;
+    animation: move 10s linear alternate infinite;
+}
+@-webkit-keyframes move{
+   100%{background-position: 100%;}
+}
+#earth::before{
+    content: '';
+    position: absolute;
+    top: 265px; 
+    left: 30px;
+    width: 255px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.781);
+    filter: blur(12px);
+    border-radius: 100%;
+    animation: shadow 4s linear infinite alternate;
+    z-index: -1;
+}
+@-webkit-keyframes shadow{
+        100%{width: 300px;background: rgba(0, 0, 0, 0.918);}
+}
